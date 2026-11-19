@@ -43,14 +43,14 @@
 
   /* hero */
   .hero{padding:56px 0 80px}
+  .hero-text{display:flex;flex-direction:column}
   .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
   .hero h1{font-size:clamp(36px,5.4vw,62px);margin-bottom:20px}
   .hero h1 em{font-style:normal;color:var(--accent)}
   .hero p.lead{font-size:20px;color:var(--muted);margin-bottom:30px;max-width:520px}
   .hero-photo{position:relative}
-  .hero-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);display:block;box-shadow:0 30px 60px -30px rgba(30,42,47,.45)}
-  .badge{position:absolute;left:-22px;bottom:34px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 14px 30px -12px rgba(30,42,47,.3);font-size:14px;line-height:1.35}
-  .badge b{font-family:Unbounded;font-size:17px;display:block;color:var(--accent-dark)}
+  .hero-photo img{width:100%;height:auto;border-radius:var(--radius);display:block;box-shadow:0 30px 60px -30px rgba(30,42,47,.45)}
+  .badge{position:absolute;right:14px;bottom:14px;background:#fff;border-radius:14px;padding:10px 14px;box-shadow:0 14px 30px -12px rgba(30,42,47,.35);font-family:Unbounded;font-weight:700;font-size:14px;color:var(--accent-dark);line-height:1.2}
   .facts{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
   .facts div{font-size:14px;color:var(--muted)}
   .facts b{display:block;font-family:Unbounded;font-size:22px;color:var(--ink)}
@@ -98,13 +98,19 @@
   footer{padding:30px 0 40px;text-align:center;color:var(--muted);font-size:14px}
 
   @media (max-width:820px){
-    section{padding:60px 0}
-    .hero .wrap,.about .wrap,.two,.where-box{grid-template-columns:1fr}
-    .hero{padding-top:30px}
-    .hero-photo{order:-1;max-width:420px}
-    .badge{left:12px;bottom:12px}
+    section{padding:44px 0}
+    .hero{padding:24px 0 44px}
+    .hero .wrap,.about .wrap,.two,.where-box{grid-template-columns:1fr;gap:24px}
     .svc{grid-template-columns:1fr}
-    .about img{max-width:420px}
+    .svc,.two,.where-box{margin-top:24px;gap:16px}
+    .hero h1{order:-1;font-size:34px;margin-bottom:12px}
+    .hero .eyebrow{margin-bottom:12px}
+    .hero p.lead{font-size:18px;margin-bottom:22px}
+    .facts{margin-top:22px}
+    .about h2,.section-title{margin-bottom:0}
+    .about h2{margin-bottom:16px}
+    .contact .panel{padding:36px 20px}
+    .logo{font-size:17px}
     .nav-cta{display:none}
   }
 </style>
@@ -120,7 +126,7 @@
 
 <header class="hero">
   <div class="wrap">
-    <div>
+    <div class="hero-text">
       <div class="eyebrow">Фрязино · каждое воскресенье</div>
       <h1>Воскресная пробежка <em>для себя любимой</em></h1>
       <p class="lead">Бегаем в спокойном темпе и разговариваем. Кто-то приходит, чтобы сбросить вес, кто-то — чтобы вернуть душевное равновесие. Я рядом: поддержу, выслушаю и помогу дойти до вашей цели.</p>
@@ -137,12 +143,11 @@
       <div class="facts">
         <div><b>500 ₽</b>за час пробежки</div>
         <div><b>Вс</b>каждую неделю</div>
-        <div><b>×4</b>папа четверых детей</div>
       </div>
     </div>
     <div class="hero-photo">
       <img src="img/run.jpg" alt="Сергей после забега">
-      <div class="badge"><b>Для души и для тела</b>равновесие · лёгкость · силы</div>
+      <div class="badge">Для души и для тела</div>
     </div>
   </div>
 </header>
